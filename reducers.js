@@ -22,7 +22,22 @@ function todos(state = [], action) {
 					completed: false
 				}
 			]
+		case TOGGLE_TODO:
+			return state.map((todo, index) => {
+				if (index === action.index) {
+					return Object.assign({}, todo, {
+						completed: !todo.completed
+					});
+				}
+			});
 		default:
 			return state;
 	}
 }
+
+const todoApp = combineReducers({
+	visibilityFilter,
+	todos
+});
+
+export default todoApp;
