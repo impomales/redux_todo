@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { ADD_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from './actions.js';
 
-const SHOW_ALL = VisibiltyFilters.SHOW_ALL;
+const SHOW_ALL = VisibilityFilters.SHOW_ALL;
 
 function visibilityFilter(state = SHOW_ALL, action) {
 	switch (action.type) {
@@ -28,7 +28,7 @@ function todos(state = [], action) {
 					return Object.assign({}, todo, {
 						completed: !todo.completed
 					});
-				}
+				} return todo;
 			});
 		default:
 			return state;
