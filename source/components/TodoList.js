@@ -11,7 +11,7 @@ const TodoList = ({todos, onTodoClick}) => (
 			/>
 		)}
 	</ul>
-)
+);
 
 Todo.propTypes = {
 	todos: PropTypes.arrayOf(PropTypes.shape({
@@ -20,6 +20,6 @@ Todo.propTypes = {
 		text: PropTypes.string.isRequired
 	}).isRequired).isRequired,
 	onTodoClick: PropTypes.func.isRequired
-}
+};
 
 export default TodoList;
