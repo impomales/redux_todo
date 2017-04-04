@@ -15,8 +15,10 @@ export const VisibilityFilters = {
 // ecmaScript 2015 allows shorthand syntax
 // for older, would need to be {type: 'ADD_TODO', text: text}
 
+let nextTodoId = 0;
+
 export function addTodo(text) {
-	return { type: ADD_TODO, text };
+	return { type: ADD_TODO, text, id: nextTodoId++ };
 }
 
 export function toggleTodo(index) {

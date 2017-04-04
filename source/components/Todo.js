@@ -1,4 +1,4 @@
-import React, { ProcType } from 'react';
+import React, { PropTypes } from 'react';
 
 const Todo = ({ onClick, completed, text }) => (
 	<li
@@ -8,7 +8,7 @@ const Todo = ({ onClick, completed, text }) => (
 	</li>
 );
 
-Todo.propTypes = {
+Todo.PropTypes = {
 	onClick: PropTypes.func.isRequired,
 	completed: PropTypes.bool.isRequired,
 	text: PropTypes.string.isRequired
